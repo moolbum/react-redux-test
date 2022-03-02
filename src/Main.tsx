@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import Button from "./components/Button/Button";
 import InputText from "./components/InputText/InputText";
+import Login from "./components/State/Login";
 import BasicProps from "./pages/BasicProps/BasicProps";
 import { actionCreators, State } from "./store";
 
@@ -35,6 +36,7 @@ function Main() {
             console.log("함수");
           }}
         />
+        <Login />
       </div>
     </div>
   );
