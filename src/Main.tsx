@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
+import BasicProps from "./pages/BasicProps/BasicProps";
 import { actionCreators, State } from "./store";
 
 function Main() {
@@ -19,6 +20,9 @@ function Main() {
       <button onClick={() => depositMoney(1000)}>Deposit</button>
       <button onClick={() => withdrawMoney(500)}>Withdraw</button>
       <button onClick={() => bankruptMoney()}>Bankrupt</button>
+      <div>
+        <BasicProps status="success" />
+      </div>
     </div>
   );
 }
