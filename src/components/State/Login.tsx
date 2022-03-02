@@ -6,7 +6,7 @@ interface AuthUser {
 }
 
 const Login = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
 
   const handleLogin = () => {
     setUser({
@@ -15,16 +15,11 @@ const Login = () => {
     });
   };
 
-  const handleLogout = () => {
-    setUser(null);
-  };
-
   return (
     <div>
       <button onClick={handleLogin}>로그인</button>
-      <button onClick={handleLogout}>로그아웃</button>
-      <p>User name is {user?.name}</p>
-      <p>User email is {user?.email}</p>
+      <p>User name is {user.name}</p>
+      <p>User email is {user.email}</p>
     </div>
   );
 };
