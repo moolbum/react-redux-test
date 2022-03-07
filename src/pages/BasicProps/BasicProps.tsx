@@ -1,6 +1,10 @@
 import React from "react";
 
-const BasicProps = ({ status }: { status: string }) => {
+interface PropsType {
+  Status: string;
+}
+
+const BasicProps = ({ status }: { status: PropsType["Status"] }) => {
   let message;
   if (status === "loading") {
     message = "로딩중이라네";
